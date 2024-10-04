@@ -3,7 +3,106 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Convert Degree</title>
+    <title>Temperature Converter</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Exo:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/style.css" />
   </head>
-  <body></body>
+  <body>
+    <header>
+      <h2>Temperatur Converter (&degC <span><img src="simbol.png" alt="" width="2%"></span> &degF)</h2>
+    </header>
+
+    <main>
+      <section class="container">
+        <article>
+          <p>
+            Masukkan suhu derajat celcius (&degC) ke kotak di bawah, lalu klik
+            tombol konversi untuk mendapatkan hasil konversi dalam bentuk
+            fahrenheit (&degF)
+          </p>
+        </article>
+
+        <form id="converterForm">
+          <div>
+            <label for="text-input">Celcius (&degC)</label>
+          </div>
+          <textarea
+            name="text-input"
+            id="text-input"
+            rows="5"
+            class="textarea"
+          ></textarea>
+          <div class="btn-group">
+            <button type="submit" class="btn">Konversi</button>
+            <button class="btn">Reset</button>
+            <button class="btn">Reverse</button>
+          </div>
+        </form>
+
+        <div>
+          <label for="text-input">Fahrenheit (&degF)</label>
+        </div>
+        <textarea
+          name="text-result"
+          id="text-result"
+          rows="5"
+          class="textarea"
+        ></textarea>
+
+        <div>
+          <label for="text-input">Cara Kalkulasi</label>
+        </div>
+        <textarea
+          name="text-calculate"
+          id="text-calculate"
+          rows="5"
+          class="textarea"
+        ></textarea>
+
+        <hr />
+        <p id="text-role">
+          Convert :
+          <span id="convert-role"
+            ><b>Celcius (&degC) ke Fahrenheit (&degF)</b></span
+          >
+        </p>
+        <hr />
+
+        <article>
+          <h3>Cara Konversi dari Celcius (&degC) ke Fahrenheit (&degF)</h3>
+          <p>
+            Suhu <span class="math">S</span> dalam derajat Fahrenheit (&degF)
+            sama dengan suhu <span class="math">S</span> dalam derajat Celcius
+            (&degC) kali <span class="rumus">9/5</span> tambah
+            <span class="rumus">32</span>
+          </p>
+
+          <p class="rumus">
+            <span class="math">S</span><sub>(&degF)</sub>=(<span class="math">S</span><sub>(&degC)</sub>x
+            9/5) + 32
+          </p>
+
+          <p>atau</p>
+
+          <p class="rumus">
+            <span class="math">S</span><sub>(&degF)</sub>=(<span class="math">S</span><sub>(&degC)</sub>x
+            1.8) + 32
+          </p>
+        </article>
+      </section>
+    </main>
+
+    <footer>
+      <p>&#169 
+        <a href="https://github.com/Fadli080818" style="color: white"
+          >Muhammad Fadli</a> | Mini Coding Project Revou
+      </p>
+    </footer>
+    <script src="js/script.js"></script>
+  </body>
 </html>
