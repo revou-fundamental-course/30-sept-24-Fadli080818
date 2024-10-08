@@ -55,6 +55,7 @@ function btnReset() {
   document.getElementById("text-convert").innerHTML =
     "Celcius (&degC) ke Fahrenheit (&degF)";
   document.getElementById("text-calculate").value = "S = Value * (9 / 5) + 32";
+  document.getElementById("text-input").focus();
 }
 
 function btnConvert() {
