@@ -27,9 +27,11 @@
           </p>
         </article>
 
-        <form id="converterForm">
+        <div id="converterForm">
+          <input type="hidden" id="convertRole" name="convert-role" value="0">
+
           <div>
-            <label for="text-input">Celcius (&degC)</label>
+            <label for="text-input" id="text1">Celcius (&degC)</label>
           </div>
           <textarea
             name="text-input"
@@ -38,37 +40,39 @@
             class="textarea"
           ></textarea>
           <div class="btn-group">
-            <button type="submit" class="btn">Konversi</button>
-            <button class="btn">Reset</button>
-            <button class="btn">Reverse</button>
+            <button class="btn" onclick="btnConvert()">Konversi</button>
+            <button class="btn" onclick="btnReset()">Reset</button>
+            <button class="btn" onclick="btnReverse()">Reverse</button>
           </div>
-        </form>
+        </>
 
         <div>
-          <label for="text-input">Fahrenheit (&degF)</label>
+          <label for="text-result" id="text2">Fahrenheit (&degF)</label>
         </div>
         <textarea
           name="text-result"
           id="text-result"
           rows="5"
           class="textarea"
+          disabled
         ></textarea>
 
         <div>
-          <label for="text-input">Cara Kalkulasi</label>
+          <label for="text-calculate">Cara Kalkulasi</label>
         </div>
         <textarea
           name="text-calculate"
           id="text-calculate"
           rows="5"
           class="textarea"
-        ></textarea>
+          disabled
+        >S = Value * (9 / 5) + 32</textarea>
 
         <hr />
         <p id="text-role">
           Convert :
-          <span id="convert-role"
-            ><b>Celcius (&degC) ke Fahrenheit (&degF)</b></span
+          <span id="text-convert"
+            >Celcius (&degC) ke Fahrenheit (&degF)</span
           >
         </p>
         <hr />
@@ -83,14 +87,14 @@
           </p>
 
           <p class="rumus">
-            <span class="math">S</span><sub>(&degF)</sub>=(<span class="math">S</span><sub>(&degC)</sub>x
+            <span class="math">S</span><sub>(&degF)</sub> = (<span class="math">S</span><sub>(&degC)</sub> x
             9/5) + 32
           </p>
 
           <p>atau</p>
 
           <p class="rumus">
-            <span class="math">S</span><sub>(&degF)</sub>=(<span class="math">S</span><sub>(&degC)</sub>x
+            <span class="math">S</span><sub>(&degF)</sub> = (<span class="math">S</span><sub>(&degC)</sub> x
             1.8) + 32
           </p>
         </article>
