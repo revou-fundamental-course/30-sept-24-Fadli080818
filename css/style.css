@@ -26,6 +26,11 @@ main {
   margin-bottom: 60px;
 }
 
+.container h1 {
+  text-align: center;
+  padding-top: 10px;
+}
+
 .container article p {
   text-align: center;
   margin: 20px 0;
