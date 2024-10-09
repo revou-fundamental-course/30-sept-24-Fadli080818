@@ -13,9 +13,9 @@
     <link rel="stylesheet" href="css/style.css" />
   </head>
   <body>
-    <header>
+    <!-- <header>
       <h2>Temperatur Converter (&degC <span><img src="simbol.png" alt="" width="2%"></span> &degF)</h2>
-    </header>
+    </header> -->
 
     <main>
       <section class="container">
@@ -28,7 +28,7 @@
         </article>
 
         <div id="converterForm">
-          <input type="hidden" id="convertRole" name="convert-role" value="0">
+          <input type="hidden" id="convertRole" name="convert-role" value="0" />
 
           <div>
             <label for="text-input" id="text1">Celcius (&degC)</label>
@@ -38,13 +38,14 @@
             id="text-input"
             rows="5"
             class="textarea"
+            autofocus
           ></textarea>
           <div class="btn-group">
             <button class="btn" onclick="btnConvert()">Konversi</button>
             <button class="btn" onclick="btnReset()">Reset</button>
             <button class="btn" onclick="btnReverse()">Reverse</button>
           </div>
-        </>
+        </div>
 
         <div>
           <label for="text-result" id="text2">Fahrenheit (&degF)</label>
@@ -66,14 +67,14 @@
           rows="5"
           class="textarea"
           disabled
-        >S = Value * (9 / 5) + 32</textarea>
+        >
+S = Value * (9 / 5) + 32</textarea
+        >
 
         <hr />
         <p id="text-role">
           Convert :
-          <span id="text-convert"
-            >Celcius (&degC) ke Fahrenheit (&degF)</span
-          >
+          <span id="text-convert">Celcius (&degC) ke Fahrenheit (&degF)</span>
         </p>
         <hr />
 
@@ -87,26 +88,36 @@
           </p>
 
           <p class="rumus">
-            <span class="math">S</span><sub>(&degF)</sub> = (<span class="math">S</span><sub>(&degC)</sub> x
-            9/5) + 32
+            <span class="math">S</span><sub>(&degF)</sub> = (<span class="math"
+              >S</span
+            ><sub>(&degC)</sub> x 9/5) + 32
           </p>
 
           <p>atau</p>
 
           <p class="rumus">
-            <span class="math">S</span><sub>(&degF)</sub> = (<span class="math">S</span><sub>(&degC)</sub> x
-            1.8) + 32
+            <span class="math">S</span><sub>(&degF)</sub> = (<span class="math"
+              >S</span
+            ><sub>(&degC)</sub> x 1.8) + 32
           </p>
         </article>
       </section>
     </main>
 
-    <footer>
+    <!-- Custom Alert -->
+    <div id="customAlertBox" class="custom-alert">
+      <div class="custom-alert-content">
+        <button class="close" id="close" onclick="closeAlert()">&times;</button>
+        <p id="alertMessage"></p>
+      </div>
+    </div>
+
+    <!-- <footer>
       <p>&#169 
         <a href="https://github.com/Fadli080818" style="color: white"
           >Muhammad Fadli</a> | Mini Coding Project Revou
       </p>
-    </footer>
+    </footer> -->
     <script src="js/script.js"></script>
   </body>
 </html>
